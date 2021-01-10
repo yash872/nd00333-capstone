@@ -63,6 +63,7 @@ automl_config = AutoMLConfig(task='classification',
 -> Featurization is likewise done which naturally scales and standardizes the dataset.
 
 <img src="https://github.com/Sabyh/nd00333-capstone/blob/master/Screenshots/mnist/automl-run-status.PNG">
+![RunDetails Widget](https://github.com/yash872/operationalizing-machine-learning/blob/master/Images/pipeline-7.JPG)
 <img src="Screenshots/mnist/best-run-models.PNG">
 
 ### Results
