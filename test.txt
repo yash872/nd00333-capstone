@@ -1,5 +1,0 @@
-resp = request.post(service.scoring_uri, input_data, headers=headers)
-
-print('POST to URL: ', service.scoring_uri)
-print('label:', y_test[random_index])
-print('Prediction: ',resp.text)
