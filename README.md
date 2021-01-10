@@ -77,7 +77,7 @@ The other models that are used with VotingEnsemble and there weights are:
 
 To improve the model we can utilize distinctive objective measurement like AUC_weighted or Recall. We can likewise have a go at hypertuning the boundaries to check whether there is any improvement.
 
-![Best_Run_Model](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/Best_run_models.PNG)
+![Best_Run_Model](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/best_run_model.PNG)
 ![AutoML_Matrics](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/automl_metrics.PNG)
 
 **Best Run Id**
