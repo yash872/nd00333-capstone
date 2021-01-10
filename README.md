@@ -1,7 +1,9 @@
+***
 # MNIST Digit Classification using Microsoft AzureML
 
 In this capstone project I have used MNIST handwriiten digit dataset which is an open source dataset, and train it with two approches. firstly with AutoML and afterwards by using HyderDrive with tuned hyperparameters. the model with the best accuracy is then deployed and tested using webservices.
 
+***
 ## Dataset
 
 ### Overview
@@ -22,6 +24,8 @@ The Features are the pixel values ranging from 0 to 255 for the digit images fro
 ### Access
 After downloading the MNIST Dataset from kaggle as a csv file, it is registered as a Dataset in the Azure Workspace in a Tabular form uploading from local system. 
 I have used **Dataset.get_by_name(ws, dataset_name)** to access our registered dataset.
+
+***
 
 ## Automated ML
 The AutoML settings and configuration used are as follows:
@@ -84,6 +88,7 @@ To improve the model we can utilize distinctive objective measurement like AUC_w
 
 <img src="Screenshots/mnist/register-model.PNG">
 
+***
 
 ## Hyperparameter Tuning
 As its a image classification task so we have used convolutional neural network to train it on the image dataset. I have used softmax as a activation function and for loss I have used categorical_crossentropy. 
@@ -111,6 +116,7 @@ To improve the model we can utilize diverse objective measurement to get more ex
 
 <img src="Screenshots/mnist/hyperdrive-register-model.PNG">
 
+***
 ## Model Deployment
 The AutoMl model is conveyed utilizing Azure Container Instance as a WebService. Best run environment and score.py document is given to the InferenceConfig. 
 
@@ -128,11 +134,9 @@ The endpoint is tested by following way:
 
 <img src="Screenshots/mnist/model-test2.PNG">
 
+***
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+:movie_camera: [Click here for the Screencast]()
 
 ## Future Improvements
 - Larger dataset can be used to increase data quality
