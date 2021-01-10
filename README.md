@@ -1,7 +1,7 @@
 ***
 # MNIST Digit Classification using Microsoft AzureML
 
-In this capstone project I have used MNIST handwriiten digit dataset which is an open source dataset, and train it with two approches. firstly with AutoML and afterwards by using HyderDrive with tuned hyperparameters. the model with the best accuracy is then deployed and tested using webservices.
+In this capstone project I have used MNIST handwritten digit dataset which is an open source dataset, and train it with two approches. firstly with AutoML and afterwards by using HyderDrive with tuned hyperparameters. the model with the best accuracy is then deployed and tested using webservices.
 
 ***
 ## Dataset
@@ -62,9 +62,8 @@ automl_config = AutoMLConfig(task='classification',
 -> Primary metric was Accuracy to test how well our model performed in automl.
 -> Featurization is likewise done which naturally scales and standardizes the dataset.
 
-<img src="https://github.com/Sabyh/nd00333-capstone/blob/master/Screenshots/mnist/automl-run-status.PNG">
-![RunDetails Widget](https://github.com/yash872/operationalizing-machine-learning/blob/master/Images/pipeline-7.JPG)
-<img src="Screenshots/mnist/best-run-models.PNG">
+![AutoML_Run_Status](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/automl_run_status.PNG)
+![Models](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/Best_run_models.PNG)
 
 ### Results
 The best performing model after training using AutoML is VotingEnsemble with the AUC weighted as 0.99995
@@ -78,16 +77,16 @@ The other models that are used with VotingEnsemble and there weights are:
 
 To improve the model we can utilize distinctive objective measurement like AUC_weighted or Recall. We can likewise have a go at hypertuning the boundaries to check whether there is any improvement.
 
-<img src="Screenshots/mnist/automl-best-model.PNG">
-<img src="Screenshots/mnist/automl3.PNG">
+![Best_Run_Model](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/Best_run_models.PNG)
+![AutoML_Matrics](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/automl_metrics.PNG)
 
 **Best Run Id**
 
-<img src="Screenshots/mnist/best-run-id.PNG">
+![Best_Run_Id](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/best_run_id.PNG)
 
 **Best AutoML Model Registered**
 
-<img src="Screenshots/mnist/register-model.PNG">
+![Registered_Model](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/registered_model.PNG)
 
 ***
 
@@ -100,7 +99,7 @@ The parameters used for hyperparameter tuning are:
 - dropout (The term “dropout” refers to dropping out units (both hidden and visible) in a neural network. Simply put, dropout refers to ignoring units (i.e. neurons) during the training phase of certain set of neurons which is chosen at random.)
 - hidden (Number of hidden layers in neural network)
 
-<img src="Screenshots/mnist/hyperdrive-1.PNG">
+![HyperDrive_Status](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/hyperdrive_status_1.PNG)
 
 ### Results
 The best Accuracy for the HyperDrive model is 81%
@@ -111,11 +110,13 @@ The best hyperparameters for this accuracy are:
 - 'epoch': 50
 
 To improve the model we can utilize diverse objective measurement to get more extensive point of view. We can likewise take a stab at expanding the scope of the hyperparameters to check whether there is any improvement.
-<img src="Screenshots/mnist/hyperdrive-best-model.PNG">
+
+![HyperDrive_Best_Model](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/hyperdrive_result.PNG)
+
 
 **Best HyperDrive Model Registered**
 
-<img src="Screenshots/mnist/hyperdrive-register-model.PNG">
+![HyperDrive_Register_Model](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/hyperdrive_register_model.PNG)
 
 ***
 ## Model Deployment
@@ -125,15 +126,14 @@ Cpu_cores and memory_gb are instated as 1 for the arrangement design. The aci ad
 
 The model is effectively sent as a web administration and a REST endpoint is made with status Healthy. A scoring uri is likewise produced to test the endpoint.
 
-<img src="Screenshots/mnist/model-deployment.PNG">
+![Model_Deployment](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/model_deployment.PNG)
 
-<img src="Screenshots/mnist/deployed-endpoint.PNG">
+![Healthy_Deployment](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/service_healthy.PNG)
 
 The endpoint is tested by following way: 
 - using endpoint.py file which passes 1 data points as json to the scoring uri which return a label indicating which digit it is.
 
-
-<img src="Screenshots/mnist/model-test2.PNG">
+![Model_Test](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/model_test.PNG)
 
 ***
 ## Screen Recording
