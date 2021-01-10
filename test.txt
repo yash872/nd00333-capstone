@@ -1,0 +1,2 @@
+print('\n Parameters:', parameter_values)
+print('\n Accuracy:', best_run_metrics['Accuracy'])
