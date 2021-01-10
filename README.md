@@ -56,11 +56,11 @@ automl_config = AutoMLConfig(task='classification',
                              )
 ```
 
--> Experiment timeout is set to 20 minutes to control the use of resources.
--> Maximum 10 iterations can be run simultaneously to maximize usage.
--> task value is given as Classification as the target column digit has values 0-9.
--> Primary metric was Accuracy to test how well our model performed in automl.
--> Featurization is likewise done which naturally scales and standardizes the dataset.
+- Experiment timeout is set to 20 minutes to control the use of resources.
+- Maximum 10 iterations can be run simultaneously to maximize usage.
+- task value is given as Classification as the target column digit has values 0-9.
+- Primary metric was Accuracy to test how well our model performed in automl.
+- Featurization is likewise done which naturally scales and standardizes the dataset.
 
 ![AutoML_Run_Status](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/automl_run_status.PNG)
 ![Models](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/Best_run_models.PNG)
