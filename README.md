@@ -137,7 +137,7 @@ The endpoint is tested by following way:
 
 ***
 ## Screen Recording
-:movie_camera: [Click here for the Screencast](https://drive.google.com/file/d/1jWNaTVAebl9xFGd1KCOVj71iqWKiMzOY/view)
+:movie_camera: [Click here for the Screencast](https://drive.google.com/file/d/1z7P5bpGZ9thRE4BQhmFuY72XXiE2_61k/view)
 
 ## Future Improvements
 - Larger dataset can be used to increase data quality
