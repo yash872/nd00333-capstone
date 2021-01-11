@@ -66,7 +66,7 @@ automl_config = AutoMLConfig(task='classification',
 ![Models](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/Best_run_models.PNG)
 
 ### Results
-The best performing model after training using AutoML is VotingEnsemble with the AUC weighted as 0.99995
+The best performing model after training using AutoML is VotingEnsemble with the AUC weighted as 0.99995 and accuracy as 0.99352
 
 The other models that are used with VotingEnsemble and there weights are:
 ```
@@ -102,11 +102,11 @@ The parameters used for hyperparameter tuning are:
 ![HyperDrive_Status](https://github.com/yash872/nd00333-capstone/blob/master/Screenshots/hyperdrive_status_1.PNG)
 
 ### Results
-The best Accuracy for the HyperDrive model is 81%
+The best Accuracy for the HyperDrive model is 0.77799
 The best hyperparameters for this accuracy are:
-- 'hidden:': 200
+- 'hidden:': 300
 - 'batch-size': 64
-- 'drop-out': 1
+- 'drop-out': 0.5
 - 'epoch': 50
 
 To improve the model we can utilize diverse objective measurement to get more extensive point of view. We can likewise take a stab at expanding the scope of the hyperparameters to check whether there is any improvement.
